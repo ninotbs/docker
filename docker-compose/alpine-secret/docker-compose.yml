@@ -1,0 +1,14 @@
+version: '1.1'
+
+services:
+  secrettest:
+   image: alpine
+   secrets:
+     - password
+     - ./top-secret.txt
+     - source: top-secret.txt
+       target: /run/secrets/top-secret.txt
+
+secrets:
+  password:
+   file: ./top-secret.txt
