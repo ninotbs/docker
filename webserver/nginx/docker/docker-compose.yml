@@ -1,0 +1,13 @@
+# Datei: webserver/nginx/docker/docker-compose.yml
+version: '3'
+services:
+  api:
+   build: .
+   image: docker/docker-web
+   restart: always
+   networks:
+    - nginxterminator_default
+    - default
+networks:
+  nginxterminator_default:
+   external: true
