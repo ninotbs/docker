@@ -1,0 +1,11 @@
+# Datei: webserver/haproxy/manual/docker-compose.yml
+version: "3"
+services:
+  haproxy:
+    image: docker/haproxy
+    ports:
+      - 8080:80
+  nginx:
+    image: docker/nginx
+  apache:
+    image: docker/apache
